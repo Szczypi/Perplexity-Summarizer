@@ -45,7 +45,7 @@ Rozszerzenie będzie uruchamiać się z przeglądarką Firefox.
    - Czy podsumowanie ma:
      - Pojawiać się w panelu bocznym,
      - Otwierać się w nowej karcie Perplexity.
-3. (Opcjonalnie) włącz automatyczne podsumowywanie artykułów po załadowaniu strony.
+3. (Opcjonalnie) Włącz automatyczne podsumowywanie artykułów po załadowaniu strony.
 
 Przycisk **„Podsumuj stronę”** użyje aktualnie zapisanych ustawień.
 
