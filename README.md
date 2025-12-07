@@ -12,7 +12,7 @@ Dodatek do przeglądarki Firefox, który streszcza aktualnie oglądane artykuły
 - Opcja automatycznego podsumowywania nowych artykułów po załadowaniu strony.
 - Możliwość wyboru:
   - Wyświetlania streszczenia w panelu bocznym Firefoxa,
-  - Albo otwierania nowej karty z Perplexity i gotowym promptem.
+  - Otwierania nowej karty z Perplexity i gotowym promptem.
 - Kontekstowe menu (prawy przycisk myszy) do podsumowania całej strony lub zaznaczonego tekstu.
 
 ## Wymagania
@@ -44,7 +44,7 @@ Rozszerzenie będzie uruchamiać się z przeglądarką Firefox.
    - Format: **Akapity** lub **Punktowo**,
    - Czy podsumowanie ma:
      - Pojawiać się w panelu bocznym,
-     - Pzy otwierać się w nowej karcie Perplexity.
+     - Otwierać się w nowej karcie Perplexity.
 3. (Opcjonalnie) włącz automatyczne podsumowywanie artykułów po załadowaniu strony.
 
 Przycisk **„Podsumuj stronę”** użyje aktualnie zapisanych ustawień.
