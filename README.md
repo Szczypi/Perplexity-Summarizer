@@ -25,7 +25,7 @@ Rozszerzenie do przeglądarki Firefox, które streszcza aktualnie oglądane arty
 Rozszerzenie można włączyć na dwa sposoby:
 
 1. Kup na Allegro subskrypcje Perplexity Pro i wygeneruj klucz API.
-2. Sklonuj repozytorium lub pobierz paczkę ZIP z GitHuba.
+2. Sklonuj repozytorium lub [pobierz paczkę ZIP](https://github.com/Szczypi/Podsumuj-Perplexity/archive/refs/tags/1.0.zip) z GitHuba.
 3. Wklej klucz do pliku `background.js` i spakuj w ZIP pobrane pliki.
 4. Otwórz w Firefoxie stronę `about:debugging#/runtime/this-firefox`.
 5. Kliknij **Załaduj tymczasowy dodatek** i wybierz plik `manifest.json`.
@@ -58,4 +58,4 @@ Dodatek potrzebuje dostępu do treści stron, aby móc je streszczać. Nie zapis
 
 ## Licencja
 
-MIT/X11 License.
+Rozszerzenie jest objęte [MIT/X11 License](https://github.com/Szczypi/Podsumuj-Perplexity/blob/main/LICENSE).
