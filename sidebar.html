@@ -3,102 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Podsumowanie</title>
+  <title>Ustawienia podsumowań</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
-      line-height: 1.6;
+      margin: 0;
+      padding: 8px 12px;
+      background: #f8f9fa;
+      color: #222;
+      min-width: 280px;
     }
 
-    .container {
-      padding: 8px 8px;
-      height: 100vh;
-      overflow-y: auto;
+    h1 {
+      font-size: 16px;
+      margin: 0 0 8px 0;
     }
 
-    .loading {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 200px;
-      color: #666;
-    }
-
-    .spinner {
-      border: 3px solid #f3f3f3;
-      border-top: 3px solid #3498db;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1s linear infinite;
-      margin-right: 10px;
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    .error {
-      background-color: #fee;
-      color: #c33;
-      padding: 12px;
+    fieldset {
+      border: 1px solid #ddd;
       border-radius: 4px;
-      margin-bottom: 12px;
-    }
-
-    .summary-content {
-      background-color: #ffffff;
       padding: 8px 10px;
+      margin-bottom: 10px;
+    }
+
+    legend {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    label {
+      font-size: 13px;
+      display: block;
+      margin: 4px 0;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 6px 10px;
+      font-size: 13px;
       border-radius: 4px;
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.6;
+      border: none;
+      cursor: pointer;
     }
 
-	.summary-text ul {
-      margin: 0;
-      padding-left: 18px;
-      list-style-position: inside;
+    #saveBtn {
+      background: #0060df;
+      color: #fff;
     }
 
-	.summary-text li {
-	  margin-bottom: 4px;
-	}
-
-    .empty-state {
-      text-align: center;
-      padding: 40px 20px;
-      color: #999;
+    #summarizeBtn {
+      background: #00a400;
+      color: #fff;
     }
 
-    .empty-state-icon {
-      font-size: 40px;
-      margin-bottom: 12px;
+    .status {
+      margin-top: 8px;
+      font-size: 12px;
+      display: none;
+    }
+
+    .status.success {
+      color: #008000;
+    }
+
+    .status.error {
+      color: #c00000;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div id="content">
-      <div class="empty-state">
-        <div class="empty-state-icon">📄</div>
-        <p>Kliknij ikonę na pasku zadań, aby podsumować bieżącą stronę lub prawego przycisku myszy.</p>
-      </div>
-    </div>
+  <h1>Ustawienia</h1>
+
+  <fieldset>
+    <legend>Długość</legend>
+    <label><input type="radio" name="summaryMode" value="short" /> Krótkie</label>
+    <label><input type="radio" name="summaryMode" value="long" /> Długie</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Format</legend>
+    <label><input type="radio" name="summaryFormat" value="paragraph" /> Akapity</label>
+    <label><input type="radio" name="summaryFormat" value="bullets" /> Punktowo</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Opcje</legend>
+    <label><input type="checkbox" id="autoSummarize" /> Automatyczne podsumowania</label>
+    <label><input type="checkbox" id="showInSidebar" checked /> Pokazuj w panelu bocznym</label>
+  </fieldset>
+
+  <div class="buttons">
+    <button id="saveBtn">Zapisz ustawienia</button>
+    <button id="summarizeBtn">Podsumuj stronę</button>
   </div>
-  <script src="sidebar.js"></script>
+
+  <div id="status" class="status"></div>
+
+  <script src="popup.js"></script>
 </body>
 </html>
